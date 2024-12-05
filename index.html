@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>성동공고 전기과 학교생활 웹서비스</title>
+  <title>서울성동공업고등학교 웹서비스</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
+      font-size: 16px; /* 기본 글씨 크기 */
     }
 
     header {
@@ -17,6 +18,11 @@
       color: white;
       padding: 15px;
       text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.5em; /* 제목 크기 */
+      margin: 0;
     }
 
     main {
@@ -50,7 +56,7 @@
       cursor: pointer;
       background-color: #f4f4f4;
       border-radius: 5px;
-      font-size: 0.9em;
+      font-size: 0.8em; /* 날짜 글씨 크기 */
     }
 
     .calendar div:hover {
@@ -97,11 +103,39 @@
       color: white;
       font-size: 0.8em;
     }
+
+    /* 미디어 쿼리 추가 */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px; /* 모바일 기본 글씨 크기 */
+      }
+
+      header h1 {
+        font-size: 1.2em; /* 모바일 제목 크기 */
+      }
+
+      h2 {
+        font-size: 1em; /* 섹션 제목 크기 */
+      }
+
+      .calendar div {
+        font-size: 0.7em; /* 날짜 글씨 크기 */
+        padding: 8px; /* 모바일에서 칸 크기 축소 */
+      }
+
+      .event-info, .meal-info {
+        font-size: 0.8em; /* 모바일 세부 정보 크기 */
+      }
+
+      footer {
+        font-size: 0.7em; /* 모바일 푸터 글씨 크기 */
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>서울성동공업고등학교 웹서비스</h1>
+    <h1>성동공업고등학교 전기과 학교생활 웹서비스</h1>
   </header>
   <main>
     <section id="calendar-section">
