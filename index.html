@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>서울성동공업고등학교 웹서비스</title>
+  <title>성동공고 전기과 학교생활 웹서비스</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,15 +11,18 @@
       padding: 0;
       background-color: #f9f9f9;
     }
+
     header {
       background-color: #0078d7;
       color: white;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
     }
+
     main {
-      padding: 20px;
+      padding: 15px;
     }
+
     section {
       margin-bottom: 20px;
       background-color: white;
@@ -27,56 +30,72 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     h2 {
       margin-top: 0;
       color: #333;
+      font-size: 1.2em;
     }
+
     .calendar {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
       gap: 5px;
     }
+
     .calendar div {
-      padding: 15px;
+      padding: 10px;
       border: 1px solid #ddd;
       text-align: center;
       cursor: pointer;
       background-color: #f4f4f4;
       border-radius: 5px;
+      font-size: 0.9em;
     }
+
     .calendar div:hover {
       background-color: #0078d7;
       color: white;
     }
+
     .calendar div.scheduled {
       background-color: #ffeeba;
     }
+
     .event-info, .meal-info {
       margin-top: 10px;
       padding: 10px;
       background-color: #e9f5e9;
       border: 1px solid #aad6aa;
       border-radius: 5px;
+      font-size: 0.9em;
     }
+
     .department-list {
       list-style: none;
       padding: 0;
     }
+
     .department-list li {
       margin: 10px 0;
     }
+
     .department-list a {
       text-decoration: none;
       color: #0078d7;
+      font-size: 0.9em;
     }
+
     .department-list a:hover {
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       padding: 10px;
       background-color: #333;
       color: white;
+      font-size: 0.8em;
     }
   </style>
 </head>
