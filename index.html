@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서울성동공업고등학교 웹서비스</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .department-content {
+      margin-top: 10px;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .department-list {
+      list-style: none;
+      padding: 0;
+    }
+    .department-list li {
+      margin: 10px 0;
+    }
+    .department-list button {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .department-list button:hover {
+      background-color: #005bb5;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>서울성동공업고등학교 웹서비스</h1>
+  </header>
+  <main>
+    <section id="department-activities-section">
+      <h2>학과 활동</h2>
+      <ul class="department-list" id="department-list"></ul>
+      <div class="department-content" id="department-content">
+        학과명을 클릭하여 활동 내용을 확인하세요.
+      </div>
+    </section>
+  </main>
+  <footer>
+    © 2024 서울성동공업고등학교
+  </footer>
+
+  <script>
+    // 학과 활동 데이터
+    const departmentData = [
+      { 
+        name: "전기과", 
+        content: "전기과는 전기 기술과 관련된 이론과 실습을 통해 전기 설계, 유지보수 능력을 함양합니다." 
+      },
+      { 
+        name: "전자과", 
+        content: "전자과는 전자회로 설계 및 통신 장비 개발을 위한 전문 지식을 제공합니다." 
+      },
+      { 
+        name: "기계과", 
+        content: "기계과는 기계 설계와 자동화 기술에 초점을 맞추어 전문 인력을 양성합니다." 
+      },
+      { 
+        name: "건축과", 
+        content: "건축과는 설계, 시공, 구조 설계와 같은 건축 기술을 교육합니다." 
+      },
+      { 
+        name: "토목과", 
+        content: "토목과는 인프라 설계와 관련된 다양한 프로젝트를 실습을 통해 배웁니다." 
+      },
+      { 
+        name: "화학과", 
+        content: "화학과는 화학 공학 및 환경 분석 기술을 중점적으로 다룹니다." 
+      },
+      { 
+        name: "컴퓨터과", 
+        content: "컴퓨터과는 소프트웨어 개발과 네트워크 기술을 배우며 미래 IT 인재를 육성합니다." 
+      },
+    ];
+
+    // 학과 활동 목록 생성
+    const departmentList = document.getElementById("department-list");
+    const departmentContent = document.getElementById("department-content");
+
+    departmentData.forEach((dept, index) => {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.textContent = dept.name;
+      button.addEventListener("click", () => showDepartmentContent(index));
+      li.appendChild(button);
+      departmentList.appendChild(li);
+    });
+
+    // 학과 내용 표시
+    function showDepartmentContent(index) {
+      departmentContent.textContent = departmentData[index].content;
+    }
+  </script>
+</body>
+</html>
